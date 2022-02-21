@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment
+  labels:
+    app: dream-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: dream-app
+  template:
+    metadata:
+      labels:
+        app: dream-app
+    spec:
+      containers:
+      - name: dream-app
+        image: ifta4766/dream-test:v1
+        ports:
+        - containerPort: 80
+
