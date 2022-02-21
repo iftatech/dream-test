@@ -13,7 +13,7 @@ pipeline {
         steps{
         withCredentials([string(credentialsId: 'ifta4766_docker_cred', variable: 'dockerHubPwd')]) {
         sh "docker login -u ifta4766 -p ${dockerHubPwd}"
-        sh "docker push ifta4766/dream-test:v1:${env.BUILD_ID}"
+        sh "docker push ifta4766/dream-test:v1${env.BUILD_ID}"
         }
      }
    }
