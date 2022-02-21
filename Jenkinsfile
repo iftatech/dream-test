@@ -4,7 +4,7 @@ pipeline {
     stages{
         stage('Build Docker Image'){
         steps{
-        sh "docker build . -t ifta4766/dream-test:v1:${env.BUILD_ID}"
+        sh "docker build . -t ifta4766/dream-test:v1${env.BUILD_ID}"
      }
 }
 
