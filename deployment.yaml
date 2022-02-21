@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: dream-app
-        image: ifta4766/dream-test:v1
+        image: ifta4766/dream-test: image:{{BUILD_NUMBER}}
         ports:
         - containerPort: 80
 
